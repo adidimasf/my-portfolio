@@ -1,0 +1,405 @@
+/* Palet Warna */
+:root {
+    --primary-color: #333; /* Warna utama, cocok untuk teks */
+    --secondary-color: #555; /* Warna sekunder */
+    --accent-color: #1a4f78; /* Warna aksen, untuk tombol/link */
+    --background-light: #f4f4f4; /* Warna latar belakang cerah */
+    --background-dark: #222; /* Warna latar belakang gelap */
+}
+
+/* Pengaturan Dasar dan Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif; /* Font untuk body */
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: var(--primary-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Font untuk judul */
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem; /* Tambah spasi di bawah judul */
+}
+
+/* Gaya Header & Navigasi */
+header {
+    background-color: var(--background-dark);
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#current-time {
+    color: #fff;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/* Gaya Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-light);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--accent-color);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Aturan untuk Layar Desktop (tampilan dua kolom) */
+@media (min-width: 768px) {
+    .hero-container {
+        flex-direction: row;
+        text-align: left;
+        gap: 4rem;
+    }
+    .hero-content {
+        text-align: left;
+        flex: 1;
+    }
+    .hero-image {
+        flex: 1;
+        text-align: right;
+    }
+}
+/* Gaya untuk Bagian Tentang Saya */
+#tentang {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.tentang-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.tentang-foto {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tentang-teks {
+    text-align: center;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.skills-list li {
+    background-color: var(--background-light);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+}
+
+/* Gaya untuk Bagian Pengalaman & Pendidikan */
+#pengalaman {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--background-light);
+}
+
+.pengalaman-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pengalaman-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.pengalaman-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Gaya Bagian Proyek */
+#proyek {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#proyek h2 {
+    margin-bottom: 2rem;
+}
+
+.proyek-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.proyek-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding-bottom: 1rem; /* Tambah padding agar lebih lega */
+}
+
+.proyek-item:hover {
+    transform: translateY(-10px);
+}
+
+.proyek-gambar {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.proyek-item h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.proyek-item p {
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+.proyek-link {
+    display: inline-block;
+    margin: 1rem 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent-color);
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.proyek-link:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Gaya Bagian Kontak */
+#kontak {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--background-light);
+}
+
+.kontak-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.kontak-form label {
+    font-weight: bold;
+}
+
+.kontak-form input,
+.kontak-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.kontak-form button {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.kontak-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.sosial-media a {
+    margin: 0 10px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Gaya Footer */
+footer {
+    background-color: var(--background-dark);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Aturan untuk Layar Desktop */
+@media (min-width: 768px) {
+    .tentang-content {
+        flex-direction: row;
+        text-align: left;
+        gap: 4rem;
+    }
+
+    .tentang-foto {
+        flex-shrink: 0;
+    }
+
+    .tentang-teks {
+        text-align: left;
+    }
+
+    .pengalaman-container {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+/* Gaya untuk Tombol Toggle */
+.mode-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Gaya Dark Mode */
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: #fff;
+}
+
+body.dark-mode .tentang-item,
+body.dark-mode .pengalaman-item,
+body.dark-mode .proyek-item,
+body.dark-mode .skills-list li {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .logo,
+body.dark-mode .proyek-link,
+body.dark-mode .sosial-media a,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #fff;
+}
